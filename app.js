@@ -1,6 +1,5 @@
 let express = require("express");
 require("./db");
-let connection = require("./db1");
 let User = require("./model/Person");
 let Employee = require("./model/Employee");
 let Signup = require("./model/Signup");
@@ -11,18 +10,6 @@ let app = express();
 
 app.use(cors());
 app.use(express.json());
-
-app.get("/studentmysql", (req, res) => {
-  let eq = "select * from student";
-  let user = connection.query(eq, (err, data) => {
-    if (err) {
-      res.send("no data found");
-    } else {
-      res.send(data);
-    }
-  });
-});
-
 //employee api
 app.use("/employee", employeeRouting);
 //employee api
