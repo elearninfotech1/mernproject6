@@ -1,3 +1,4 @@
 let mongoose = require("mongoose");
-let url = "mongodb://127.0.0.1:27017/mern6pm";
+let url =
+  "mongodb+srv://elearninfotech1:ATYnrUjVTxTOfIKX@user.gcxekd1.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(url);
