@@ -10,8 +10,6 @@ let app = express();
 
 app.use(cors());
 app.use(express.json());
-
-
 //employee api
 app.use("/employee", employeeRouting);
 //employee api
